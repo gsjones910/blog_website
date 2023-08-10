@@ -7,7 +7,7 @@ const BlogCard = ({ article }) => {
     <a href={`/article/${article._id}`} style={{margin:"10px"}}>
       <Card
         style={{
-          width: 300,
+          width: 240,
         }}
         cover={
           <img
