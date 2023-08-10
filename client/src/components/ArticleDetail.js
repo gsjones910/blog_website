@@ -32,9 +32,7 @@ const ArticleDetail = ({ match }) => {
         { articleId: article._id },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      if (response.data.success) {
-        window.location.reload();
-      }
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }

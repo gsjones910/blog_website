@@ -86,11 +86,11 @@ app.get("/api/article/:id", async (req, res) => {
 });
 
 // Get specific post with id
-app.get("/api/pay", async (req, res) => {
+app.post("/api/pay", async (req, res) => {
   try {
     const updateData = { isPay: true };
     const article = await Article.findByIdAndUpdate(
-      req.params.articleId,
+      req.body.articleId,
       updateData
     );
     if (!article) throw new Error("Article not found.");

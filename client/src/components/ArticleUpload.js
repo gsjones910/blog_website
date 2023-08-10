@@ -11,7 +11,6 @@ const ArticleUpload = () => {
   const [price, setPrice] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
@@ -19,7 +18,7 @@ const ArticleUpload = () => {
         { title, content, category, price },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      console.log(response.data);
+      window.location.href ="/";
     } catch (error) {
       console.error(error);
     }
